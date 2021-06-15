@@ -1,1 +1,1 @@
-Various projects I prepared in my Berkeley bootcamp for cyber security.
+A simple TCP chat client for two devices.
