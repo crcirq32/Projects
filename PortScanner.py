@@ -1,8 +1,4 @@
-#!/usr/bin/python
-
-#Do not use for illegal purposes
 #Use at own risk
-#Run with Python3
 
 import optparse	
 from socket import *
