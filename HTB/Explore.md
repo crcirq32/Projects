@@ -26,7 +26,7 @@ Yields CVE-2019-6447
 
 Now that you have downloaded the file, open the URL in a browser.
 + ${IP}:59777/$dir/$.jpg
-
++ File gives UN && PW
 
 ### Step 2
 + ssh -p 2222 $UN@${IP} 
