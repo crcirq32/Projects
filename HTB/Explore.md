@@ -7,11 +7,11 @@ Andriod OS + tools
 
 ###Enum
 nmap -p- -A -oN Exploreprts.txt ${IP}
-2222 SimplSSH
-5555 Andriod Debug bridge
-42135 ES File explorer
-59777 Bukkit JSONAPI (This is the vulnerability - mislabeled59777)
-44233 fingerprint-strings
++ 2222 SimplSSH
++ 5555 Andriod Debug bridge
++ 42135 ES File explorer
++ 59777 Bukkit JSONAPI (This is the vulnerability - mislabeled59777)
++ 44233 fingerprint-strings
 
 ###Search
 Yields CVE-2019-6447
