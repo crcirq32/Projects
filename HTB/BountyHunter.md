@@ -22,18 +22,18 @@ Yields
   + /assets/
   + /log_submit.php (looks interesting
   + /resources/ (looks promising)
-  + 
+  
 ### Burp suite
 + ${IP}/log_submit.php
 + dummy test packet
   + Data needs to be *URL then Base64 decoded*
-  + Find template https://github.com/payloadbox/xxe-injection-payload-list
-  + adjust headers to db.php headers
+  + Find template https://github.com/payloadbox
+  + adjust titles to mimic db.php titles
   + payload needs to be *Base64 then url encoded*
 + Send payload via Burp/Repeater.
 
 #### db.php payload:
-<?xml  version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 		<bugreport>
 		<title>test</title>
 		<cwe>test</cwe>
