@@ -18,7 +18,7 @@ nmap -p- -A -oN Exploreprts.txt ${IP}
 + /accounts.php
     + Ability to create UN && PW            
 + /login.php
-    + 
++ /status.php
 
 ### Step 1: User Account
 + Create account with curl request
