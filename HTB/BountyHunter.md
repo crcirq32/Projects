@@ -52,3 +52,6 @@ Yields
     </bugreport>
 
 Obtain Username: ${UN}
+
+#Stuck on XML XXE
+TODO: Study more
