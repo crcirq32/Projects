@@ -58,10 +58,10 @@ adb tool
 adroid-tools-adb
 
 ### Port forwarding script.py:
-import socket # socket\
-import subprocess  # Subprocess\
-import pyautogui  # PyAutoGui\
-import time  # Time\
+import socket\
+import subprocess\
+import pyautogui\
+import time\
 \
 def connection_function(host, port):\
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\
