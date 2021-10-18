@@ -20,8 +20,8 @@ Yields
 ### Step 1: 
 + dirb ${IP} || dirb ${IP}/ -X .php
   + /assets/
-  + /log_submit.php (looks interesting
-  + /resources/ (looks promising)
+  + /log_submit.php
+  + /resources/
   
 ### Burp suite
 + ${IP}/log_submit.php
