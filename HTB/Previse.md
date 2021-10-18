@@ -1,6 +1,6 @@
 ### Box Info
 OS: Linux\
-IP: 10.10.11.104\
+IP: 10.10.11.104
 
 ## Part I 
 
