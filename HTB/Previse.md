@@ -24,7 +24,7 @@ nmap -p- -A -oN Exploreprts.txt ${IP}
 + Create account with curl request
   + curl -is -X POST -d "username=${UN}&password=${PW}&confirm=${PW}" ${IP}/accounts.php 
 + Login with new account:
-  + Upload access, "MySQL server is online and connected", 3(2) registered admins, *sitebackup.zip*, User: m4lware
+  + Upload access, "MySQL server is online and connected", 3(2) registered admins, *sitebackup.zip*, User: m4lwhere
   + Management Menu -> Request Log Data: file delimeter
 
 ### Step 2: CMD Injection
