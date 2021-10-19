@@ -42,3 +42,4 @@ nmap -p- -A -oN Exploreprts.txt ${IP}
     + ${IP}/status.php should now connect to DB and expose users
 
 TODO: 10.10.11.104 Hung up - Stuck in limbo. Contact HTB
+TODO: server is filtering my machine 
