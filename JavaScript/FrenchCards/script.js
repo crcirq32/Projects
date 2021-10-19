@@ -1,7 +1,7 @@
 // define the object for the question entity
 let question = {
-  title: 'gato',
-  alternatives: ['dog', 'cat', 'bird', 'fish'],
+  title: 'chat',
+  alternatives: ['cat', 'dog', 'fish', 'frog'],
   correctAnswer: 1
 };
 
