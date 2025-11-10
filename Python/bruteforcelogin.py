@@ -1,4 +1,6 @@
 #script taken from Python For Ethical Hackers: Build Web App Login Brute-Force @ Udemy
+#Docker:  docker run --rm -it -p 80:80 vulnerables/web-dvwa
+#https://hub.docker.com/r/vulnerables/web-dvwa/
 import requests
 
 url = input('[+] Enter Page URL: ')
