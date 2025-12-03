@@ -4,8 +4,8 @@ Options:
 3. Quiz me
 4. Exit
 Choose an option: 1  
-Enter the question file name (e.g., question.txt): <question_file>  
-Enter the answer file name (e.g., answer.txt): <answer_file>  
+Enter the question file name (e.g., question.txt): question_file  
+Enter the answer file name (e.g., answer.txt): answer_file  
 Loaded 4 flashcards.  
 
 
