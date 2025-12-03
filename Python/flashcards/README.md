@@ -20,16 +20,6 @@ Q: 1+2? -> 3
 Correct!
 You scored 4/4
 
-question_file:
-1+2?
-1+4?
-1+5?
-
-answer_file:
-3
-5
-6
-
 Disclaimer:
 You will need to populate the question and answer file!
 This probably will not work for multiple line Q/A.
