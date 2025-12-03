@@ -10,16 +10,8 @@ Enter the question file name (e.g., question.txt): <question_file>
 Enter the answer file name (e.g., answer.txt): <answer_file>
 Loaded 4 flashcards.
 
-Options:
-Choose an option: 3
-Q: 1+4? -> 5
-Correct!
-Q: 1+5? -> 6
-Correct!
-Q: 1+2? -> 3
-Correct!
-You scored 4/4
 
 Disclaimer:
+Make sure the question & answer file are in the same directory as flashycards.py
 You will need to populate the question and answer file!
 This probably will not work for multiple line Q/A.
