@@ -1,3 +1,9 @@
+Resources:
+
+[Guide](https://www.raspberrypi.com/documentation/computers/linux_kernel.html)
+
+---
+
 #Install Dependencies
 ```
 $ sudo apt install clang llvm build-essential pkg-config libpcap-dev libelf-dev zlib1g-dev
@@ -52,3 +58,43 @@ grep -E 'CONFIG_DEBUG_INFO(_DWARF5|_BTF)?=' .config
 sudo make -j2 Image.gz modules dtbs
 ```
 
+#Kernel Compiled
+```
+ls -al ~/linux/arch/arm64/boot
+Image.gz
+Image.gz: gzip compressed data, max compression, from Unix, original size modulo 2^32 30882304
+```
+
+#Make Install
+```
+sudo make -j6 modules_install
+```
+
+#Run the following commands to create a backup image of the current kernel, install the fresh kernel image, overlays, README, and unmount the partitions:
+```
+    sudo cp /boot/firmware/$KERNEL.img /boot/firmware/$KERNEL-backup.img
+    sudo cp arch/arm64/boot/Image.gz /boot/firmware/$KERNEL.img
+    sudo cp arch/arm64/boot/dts/broadcom/*.dtb /boot/firmware/
+    sudo cp arch/arm64/boot/dts/overlays/*.dtb* /boot/firmware/overlays/
+    sudo cp arch/arm64/boot/dts/overlays/README /boot/firmware/overlays/
+```
+
+#Depending on your kernel version, run the following command:
+For kernels up to version 6.4:
+```
+sudo cp arch/arm/boot/dts/*.dtb /boot/firmware/
+```
+#For kernels version 6.5 and above:
+```
+sudo cp arch/arm/boot/dts/broadcom/*.dtb /boot/firmware/
+```
+#Copy over the overlays and README:
+```
+sudo cp arch/arm/boot/dts/overlays/*.dtb* /boot/firmware/overlays/
+sudo cp arch/arm/boot/dts/overlays/README /boot/firmware/overlays/
+```
+
+Finally, reboot to freshly compiled kernel:
+```
+sudo reboot
+```
